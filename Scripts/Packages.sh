@@ -40,6 +40,8 @@ UPDATE_PACKAGE() {
 	fi
 }
 
+git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+
 # 调用示例
 # UPDATE_PACKAGE "OpenAppFilter" "destan19/OpenAppFilter" "master" "" "custom_name1 custom_name2"
 # UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "master" "" "luci-app-appfilter oaf" 这样会把原有的open-app-filter，luci-app-appfilter，oaf相关组件删除，不会出现coremark错误。
@@ -58,7 +60,7 @@ UPDATE_PACKAGE "passwall2" "xiaorouji/openwrt-passwall2" "main" "pkg"
 #UPDATE_PACKAGE "luci-app-vlmcsd" "cokebar/luci-app-vlmcsd" "master"
 #UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
 
-UPDATE_PACKAGE "luci-app-poweroff" "esirplayground/luci-app-poweroff" "main" 
+#UPDATE_PACKAGE "luci-app-poweroff" "esirplayground/luci-app-poweroff" "main" 
 
 UPDATE_PACKAGE "alist" "sbwml/luci-app-alist" "main"
 #UPDATE_PACKAGE "easytier" "EasyTier/luci-app-easytier" "main"
