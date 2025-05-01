@@ -40,7 +40,7 @@ UPDATE_PACKAGE() {
 	fi
 }
 
-git clone --depth=1 https://github.com/kenzok8/small-package/tree/main/luci-app-poweroff package/luci-app-poweroff
+#git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 
 
 # 调用示例
@@ -48,6 +48,9 @@ git clone --depth=1 https://github.com/kenzok8/small-package/tree/main/luci-app-
 # UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "master" "" "luci-app-appfilter oaf" 这样会把原有的open-app-filter，luci-app-appfilter，oaf相关组件删除，不会出现coremark错误。
 
 # UPDATE_PACKAGE "包名" "项目地址" "项目分支" "pkg/name，可选，pkg为从大杂烩中单独提取包名插件；name为重命名为包名"
+
+UPDATE_PACKAGE "luci-app-poweroff" "kenzok8/small-package" "main" "pkg"
+
 UPDATE_PACKAGE "argon" "sbwml/luci-theme-argon" "openwrt-24.10"
 UPDATE_PACKAGE "kucat" "sirpdboy/luci-theme-kucat" "js"
 
