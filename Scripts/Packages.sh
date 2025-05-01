@@ -40,8 +40,8 @@ UPDATE_PACKAGE() {
 	fi
 }
 
-git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
-git clone --depth=1 https://github.com/cokebar/luci-app-vlmcsd package/luci-app-vlmcsd
+git clone --depth=1 https://github.com/kenzok8/small-package/tree/main/luci-app-poweroff package/luci-app-poweroff
+
 
 # 调用示例
 # UPDATE_PACKAGE "OpenAppFilter" "destan19/OpenAppFilter" "master" "" "custom_name1 custom_name2"
