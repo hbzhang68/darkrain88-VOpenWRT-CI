@@ -123,7 +123,7 @@ UPDATE_VERSION "sing-box"
 UPDATE_VERSION "zerotier"
 #UPDATE_VERSION "softethervpn5"
 
-cp -r $GITHUB_WORKSPACE/package/* ./
+#cp -r $GITHUB_WORKSPACE/package/* ./
 
 #coremark修复
 sed -i 's/mkdir \$(PKG_BUILD_DIR)\/\$(ARCH)/mkdir -p \$(PKG_BUILD_DIR)\/\$(ARCH)/g' ../feeds/packages/utils/coremark/Makefile
