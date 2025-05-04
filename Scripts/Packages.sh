@@ -69,6 +69,7 @@ UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5" "" "v2dat"
 UPDATE_PACKAGE "qmodem" "FUjr/modem_feeds" "main"
 UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-app-wolplus"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
+UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
 
 if [[ $WRT_REPO != *"immortalwrt"* ]]; then
 	UPDATE_PACKAGE "qmi-wwan" "immortalwrt/wwan-packages" "master" "pkg"
@@ -124,7 +125,7 @@ UPDATE_VERSION "zerotier"
 rm -rf small && git clone https://github.com/kenzok8/small small
 rm -rf small/{luci-app-bypass,v2ray-geodata,luci-app-fchomo}
 #不编译xray-core
-sed -i 's/+xray-core//' small/luci-app-passwall2/Makefile
+sed -i 's/+xray-core//' small/luci-app-passwall/Makefile
 
 #删除官方的默认插件
 rm -rf ../feeds/luci/applications/luci-app-{passwall*,mosdns,dockerman,dae*,bypass*}
