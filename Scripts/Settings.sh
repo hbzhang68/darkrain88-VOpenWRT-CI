@@ -32,12 +32,6 @@ sed -i "s/192\.168\.[0-9]*\.[0-9]*/$WRT_IP/g" $CFG_FILE
 sed -i "s/hostname='.*'/hostname='$WRT_NAME'/g" $CFG_FILE
 
 
-#修复dropbear
-#sed -i "s/Interface/DirectInterface/" ./package/network/services/dropbear/files/dropbear.config
-#sed -i "/Interface/d" ./package/network/services/dropbear/files/dropbear.config
-#拷贝files 文件夹到编译目录
-#cp -r ../files ./
-
 #配置文件修改
 echo "CONFIG_PACKAGE_luci=y" >> ./.config
 echo "CONFIG_LUCI_LANG_zh_Hans=y" >> ./.config
