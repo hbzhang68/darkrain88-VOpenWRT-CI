@@ -121,13 +121,3 @@ UPDATE_VERSION "sing-box"
 #UPDATE_VERSION "tailscale"
 UPDATE_VERSION "zerotier"
 #UPDATE_VERSION "softethervpn5"
-
-cp -r $GITHUB_WORKSPACE/package/* ./
-
-#coremark修复
-sed -i 's/mkdir \$(PKG_BUILD_DIR)\/\$(ARCH)/mkdir -p \$(PKG_BUILD_DIR)\/\$(ARCH)/g' ../feeds/packages/utils/coremark/Makefile
-
-argon_css_file=$(find ./luci-theme-argon/ -type f -name "cascade.css")
-#修改字体
-sed -i "/^.main .main-left .nav li a {/,/^}/ { /font-weight: bolder/d }" $argon_css_file
-sed -i '/^\[data-page="admin-system-opkg"\] #maincontent>.container {/,/}/ s/font-weight: 600;/font-weight: normal;/' $argon_css_file
