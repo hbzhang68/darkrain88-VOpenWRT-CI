@@ -13,7 +13,21 @@ CONFIG_TARGET_OPTIMIZATION="-O2 -pipe -mcpu=cortex-a53+crc+crypto"
 CONFIG_PACKAGE_luci-app-homeproxy=y
 CONFIG_PACKAGE_luci-app-nikki=m
 
+#additionalpackagefortaiyi
+
 CONFIG_PACKAGE_luci-app-dockerman=m
+
+CONFIG_PACKAGE_luci-i18n-dockerman-zh-cn=m
+
+
+CONFIG_PACKAGE_luci-i18n-nikki-zh-cn=m
+CONFIG_PACKAGE_luci-app-syncthing=m
+CONFIG_PACKAGE_luci-i18n-syncthing-zh-cn=m
+CONFIG_PACKAGE_luci-app-samba4=m
+CONFIG_PACKAGE_luci-i18n-samba4-zh-cn=m
+CONFIG_PACKAGE_luci-app-filebrowser-go=m
+CONFIG_PACKAGE_luci-i18n-filebrowser-go-zh-cn=m
+
 
 # Proxy
 #  Passwall
