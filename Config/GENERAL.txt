@@ -58,6 +58,7 @@ CONFIG_PACKAGE_luci-app-adguardhome=m
 CONFIG_PACKAGE_luci-app-mosdns=m
 CONFIG_PACKAGE_luci-app-lucky=m 
 CONFIG_PACKAGE_luci-app-smartdns=m
+CONFIG_PACKAGE_luci-app-alist=m
 #CONFIG_PACKAGE_luci-app-diskman=m
 
 #删除插件
