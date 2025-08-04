@@ -78,11 +78,23 @@ if [ -f "$RUST_FILE" ]; then
 fi
 
 #修复DiskMan编译失败
-DM_FILE=$(find ./ -maxdepth 3 -type f -wholename "*/luci-app-diskman/Makefile")
+DM_FILE="./luci-app-diskman/applications/luci-app-diskman/Makefile"
 if [ -f "$DM_FILE" ]; then
 	echo " "
 
 	sed -i 's/fs-ntfs/fs-ntfs3/g' $DM_FILE
 
 	cd $PKG_PATH && echo "diskman has been fixed!"
+fi
+
+#修复rpcsvc-proto编译失败
+RP_PATH="../feeds/packages/libs/rpcsvc-proto"
+if [ -d "$RP_PATH" ]; then
+	echo " "
+
+	cd $RP_PATH && mkdir -p patches && cd ./patches
+
+	curl -sL -o "0001-po-update-for-gettext-0.22.patch" https://raw.githubusercontent.com/neheb/packages/refs/heads/mangix/libs/rpcsvc-proto/patches/0001-po-update-for-gettext-0.22.patch
+
+	cd $PKG_PATH && echo "rpcsvc-proto has been fixed!"
 fi
