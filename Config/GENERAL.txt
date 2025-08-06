@@ -72,9 +72,9 @@ CONFIG_PACKAGE_luci-app-lucky=y
 
 #CONFIG_PACKAGE_luci-app-diskman=y
 #CONFIG_PACKAGE_luci-app-oaf=m
-#CONFIG_PACKAGE_luci-app-openlist2=y
+CONFIG_PACKAGE_luci-app-openlist2=y
 #CONFIG_PACKAGE_luci-app-adguardhome=m
-#CONFIG_PACKAGE_luci-app-vlmcsd=y
+CONFIG_PACKAGE_luci-app-vlmcsd=y
 
 #删除插件
 CONFIG_PACKAGE_luci-app-xlnetacc=n
