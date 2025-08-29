@@ -80,9 +80,9 @@ CONFIG_PACKAGE_luci-app-oaf=y
 CONFIG_PACKAGE_luci-app-lucky=y
 CONFIG_PACKAGE_luci-app-openlist2=y
 CONFIG_PACKAGE_luci-app-hd-idle=y
-CONFIG_PACKAGE_luci-app-watchcat=y
-CONFIG_PACKAGE_luci-app-3cat=y
-CONFIG_PACKAGE_luci-app-pushbot=y
+#CONFIG_PACKAGE_luci-app-watchcat=y
+#CONFIG_PACKAGE_luci-app-3cat=y
+#CONFIG_PACKAGE_luci-app-pushbot=y
 
 #删除插件
 CONFIG_PACKAGE_luci-app-xlnetacc=n
